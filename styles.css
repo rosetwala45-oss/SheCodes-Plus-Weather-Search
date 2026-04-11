@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #f9f7fe;
+  color: #885df1;
 }
 .container {
   max-width: 600px;
@@ -46,6 +46,21 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.weather-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+.weather-details {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.4);
+  line-height: 24px;
+  font-weight: 500;
+}
+.weather-details strong {
+  color: #f65282;
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
