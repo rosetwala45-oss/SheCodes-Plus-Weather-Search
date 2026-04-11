@@ -68,8 +68,8 @@ main {
   font-size: 44px;
   margin-top: 22px;
 }
-.weather-icon img {
-}
+/* .weather-icon img {
+} */
 .weather-temperature {
   font-size: 88px;
   line-height: 88px;
