@@ -27,4 +27,6 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 // -----------------------------------------------------------------------
 // Call city on page load(default):
-searchCity("Paris");
+searchCity("miami");
+
+console.log(apiUrl);
