@@ -1,12 +1,12 @@
-// THE ONE FUNCTION THAT WILL UPDATE EVERYTHING
-
+// THE ONE FUNCTION THAT WILL UPDATE EVERYTHING:
 function refreshWeather(response) {
+  // update UI after call made
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(temperature);
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
 }
 
 function searchCity(city) {
@@ -17,20 +17,14 @@ function searchCity(city) {
 }
 
 function handleSearchSubmit(event) {
+  // will give us input parameter for searchCity function to be used in API call
   event.preventDefault();
-
-  //   Getting input element
   let searchInput = document.querySelector("#search-form-input");
-  // Replacng h1 with city from API
-
-  // Geiing value for API call
   searchCity(searchInput.value);
 }
-
-// Setting a variable for the form:
 let searchFormElement = document.querySelector("#search-form");
-// What must happen when form is submitted:
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-// Call city on page load:
+// -----------------------------------------------------------------------
+// Call city on page load(default):
 searchCity("Paris");
