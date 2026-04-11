@@ -7,6 +7,24 @@ function refreshWeather(response) {
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
+
+  let timestamp = response.data.time;
+  let date = new Date(timestamp * 1000);
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let dayName = days[date.getDay()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let timeElement = document.querySelector("#time");
+  timeElement.innerHTML = `${dayName} ${hours}:${minutes}`;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+  let windElement = document.querySelector("#wind-speed");
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 function searchCity(city) {
@@ -28,5 +46,3 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 // -----------------------------------------------------------------------
 // Call city on page load(default):
 searchCity("miami");
-
-console.log(apiUrl);
