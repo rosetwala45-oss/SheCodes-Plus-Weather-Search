@@ -72,8 +72,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
-
   // Use loop to replicate for each day
   let forecastHtml = "";
 
