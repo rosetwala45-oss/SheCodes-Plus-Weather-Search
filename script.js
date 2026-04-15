@@ -104,5 +104,3 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 // -----------------------------------------------------------------------
 // Call city on page load(default):
 searchCity("miami");
-
-displayForecast();
