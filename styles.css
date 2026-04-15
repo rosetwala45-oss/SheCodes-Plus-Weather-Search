@@ -108,6 +108,18 @@ overflow-clip-margin: content-box
 }
 */
 
+.weather-forecast-temperatures {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+}
+
+.weather-forecast-temperature {
+  padding: 0 10px;
+}
+
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
