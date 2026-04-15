@@ -56,11 +56,17 @@ function handleSearchSubmit(event) {
 
 // -------------------FORECAST FUNCTION--------------------
 function displayForecast() {
-  let forecast = document.querySelector("#forecast");
+  // Use loop to replicate for each day
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = "";
 
-  forecast.innerHTML = `
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
  <div class="weather-forecast-day">
-              <div class="weather-forecast-date">Wed</div>
+              <div class="weather-forecast-date">${day}</div>
               <div class="weather-forecast-icon">🌦️</div>
               <div class="weather-forecast-temperatures">
                 <div class="weather-forecast-temperature"><strong>18°</strong></div>
@@ -68,6 +74,9 @@ function displayForecast() {
               </div>
             </div>
 `;
+  });
+  // To be run AFTER foreacstHtml
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
