@@ -99,14 +99,9 @@ main {
 .weather-forecast-icon {
   width: 88px;
   height: 88px;
+  display: block;
   margin: 0 auto;
 }
-
-/* for future image:
-img {
-overflow-clip-margin: content-box
-}
-*/
 
 .weather-forecast-temperatures {
   display: flex;
