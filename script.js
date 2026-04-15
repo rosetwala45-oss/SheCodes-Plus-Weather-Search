@@ -1,4 +1,4 @@
-// THE ONE FUNCTION THAT WILL UPDATE EVERYTHING:
+// ---THE ONE FUNCTION THAT WILL UPDATE EVERYTHING:---
 function refreshWeather(response) {
   // update UI after call made
   let temperatureElement = document.querySelector("#temperature");
@@ -24,6 +24,8 @@ function refreshWeather(response) {
 
   let iconElement = document.querySelector("#icon");
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -63,9 +65,10 @@ function getForecast(city) {
 }
 
 function displayForecast(response) {
+  console.log(response.data);
   // Use loop to replicate for each day
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  let forecastElement = document.querySelector("#forecast");
+
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -83,6 +86,7 @@ function displayForecast(response) {
 `;
   });
   // To be run AFTER foreacstHtml
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -92,5 +96,5 @@ searchFormElement.addEventListener("submit", handleSearchSubmit);
 // -----------------------------------------------------------------------
 // Call city on page load(default):
 searchCity("miami");
-getForecast("miami");
+
 displayForecast();
