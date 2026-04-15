@@ -27,23 +27,37 @@
         </form>
       </header>
       <main>
-        <div class="weather-data-container">
-          <div>
-            <h1 class="weather-city" id="city"></h1>
-            <p class="weather-details">
-              <span id="time"></span>, <span id="description">moderate rain</span>
-              <br />
-              Humidity: <strong id="humidity"></strong>, Wind:
-              <strong id="wind-speed"></strong>
-            </p>
-          </div>
+        <section>
+          <div class="weather-data-container">
+            <div>
+              <h1 class="weather-city" id="city"></h1>
+              <p class="weather-details">
+                <span id="time"></span>, <span id="description">moderate rain</span>
+                <br />
+                Humidity: <strong id="humidity"></strong>, Wind:
+                <strong id="wind-speed"></strong>
+              </p>
+            </div>
 
-          <div class="weather-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-temperature" id="temperature">12</div>
-            <div class="weather-unit">°C</div>
+            <div class="weather-temperature-container">
+              <div id="icon"></div>
+              <div class="weather-temperature" id="temperature">12</div>
+              <div class="weather-unit">°C</div>
+            </div>
           </div>
-        </div>
+        </section>
+        <section>
+          <div class="weather-forecast" id="forecast">
+            <div class="weather-forecast-day">
+              <div class="weather-forecast-date">Wed</div>
+              <div class="weather-forecast-icon">🌦️</div>
+              <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature">18°</div>
+                <div class="weather-forecast-temperature">6°</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         This project was coded by
