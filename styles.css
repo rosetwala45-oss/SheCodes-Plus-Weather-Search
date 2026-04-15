@@ -80,12 +80,12 @@ main {
   margin-top: 6px;
   font-size: 28px;
 }
+
+/* -------WEATHER FORECAST------- */
 .weather-forecast {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
-}
-.weather-forecast-day {
 }
 
 .weather-forecast-date {
@@ -95,6 +95,18 @@ main {
   line-height: 20px;
   margin-bottom: 10px;
 }
+
+.weather-forecast-icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+}
+
+/* for future image:
+img {
+overflow-clip-margin: content-box
+}
+*/
 
 footer {
   border-top: 1px solid #f9f7fe;
