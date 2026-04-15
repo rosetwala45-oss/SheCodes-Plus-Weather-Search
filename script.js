@@ -56,6 +56,20 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+// -------------------FORECAST--------------------
+let forecast = document.querySelector("#forecast");
+forecast.innerHTML = `
+ <div class="weather-forecast-day">
+              <div class="weather-forecast-date">Wed</div>
+              <div class="weather-forecast-icon">🌦️</div>
+              <div class="weather-forecast-temperatures">
+                <div class="weather-forecast-temperature"><strong>18°</strong></div>
+                <div class="weather-forecast-temperature">6°</div>
+              </div>
+            </div>
+
+`;
+
 // -----------------------------------------------------------------------
 // Call city on page load(default):
 searchCity("miami");
